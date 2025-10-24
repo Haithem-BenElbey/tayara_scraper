@@ -1,0 +1,22 @@
+version: "3.9"
+
+services:
+  immo_neuf:
+    build: .
+    container_name: tayara_immo_neuf
+    environment:
+      CATEGORY: "ImmoNeuf"
+      MAX_PAGE: 10
+      OUTPUT_DIR: "/data"
+    volumes:
+      - ./data:/data
+
+  immobilier:
+    build: .
+    container_name: tayara_immobilier
+    environment:
+      CATEGORY: "Immobilier"
+      MAX_PAGE: 500
+      OUTPUT_DIR: "/data"
+    volumes:
+      - ./data:/data

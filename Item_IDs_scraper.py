@@ -70,7 +70,7 @@ def get_tayara_ids(base_url, max_page=5):
     """
     all_ids = set()
     
-    for page in range(1, max_page + 1):
+    for page in range(0, max_page + 1):
         url = base_url.format(page)
         print(f"Scraping page: {page} -> {url}")
         try:
